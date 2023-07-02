@@ -1,14 +1,13 @@
-pkgbase = chaotic-keyring
-	pkgdesc = Chaotic-AUR PGP keyring
-	pkgver = 20220803
+pkgbase = archwin-keyring
+	pkgdesc = ArchWin PGP keyring
+	pkgver = 20230702
 	pkgrel = 1
-	url = https://aur.chaotic.cx
-	install = chaotic-keyring.install
+	url = https://archwin.github.io/repo/
+	install = archwin-keyring.install
 	arch = any
 	license = GPL
 	depends = archlinux-keyring
-	optdepends = pkgstats: install to submit package usage statistics
-	source = keyring-20220803-1.tar.gz::https://github.com/chaotic-aur/keyring/archive/20220803-1.tar.gz
-	sha512sums = faa9805dfdaf7cb809fe186d85724964f0ff7304008dd0d9e7379ae5649a103971ecd653326abca77092a6395b62da94eedc144c15679ac4c4b920229ebe23e8
+	source = keyring-20230702-1.tar.gz::https://github.com/archwin/keyring/archive/20230702-1.tar.gz
+	sha512sums = af982cee51b743fb79a539bf5a025ef3422845b187e49d9256664522cb3f3066ee97dd891abffbe9b5ed112256dda079358c11d7053899b32cc9f0f79b171f5c
 
-pkgname = chaotic-keyring
+pkgname = archwin-keyring

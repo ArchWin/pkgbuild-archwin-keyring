@@ -35,7 +35,7 @@ GPG_PACMAN=(gpg --homedir "${PACMAN_KEYRING_DIR}" --no-permission-warning)
 
 post_upgrade() {
         if usr/bin/pacman-key -l >/dev/null 2>&1; then
-                usr/bin/pacman-key --populate chaotic
+                usr/bin/pacman-key --populate archwin
 
                 ## needed for https://github.com/archlinuxcn/repo/issues/300
                 _msg "$(gettext "Updating trust database...")"
@@ -44,9 +44,9 @@ post_upgrade() {
                         exit 1
                 fi
         fi
-    if (usr/bin/grep -A3 "[^#]*\[chaotic-aur\]" /etc/pacman.conf | grep "TrustAll" >/dev/null 2>&1); then
-        _error 'Please remove the SigLevel= line of [chaotic-aur] from "/etc/pacman.conf" to use the default setting'
-        _error '请删除 /etc/pacman.conf 中 [chaotic-aur] 下的 SigLevel= 行，以使用默认设置'
+    if (usr/bin/grep -A3 "[^#]*\[archwin\]" /etc/pacman.conf | grep "TrustAll" >/dev/null 2>&1); then
+        _error 'Please remove the SigLevel= line of [archwin] from "/etc/pacman.conf" to use the default setting'
+        _error '请删除 /etc/pacman.conf 中 [archwin] 下的 SigLevel= 行，以使用默认设置'
     fi  
 }
 
